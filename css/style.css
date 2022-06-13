@@ -1,0 +1,168 @@
+:root {
+    --main-color:#999;
+    --text-color:#333;
+    --heading1:15px;
+    --baseFontSize:18px;
+}
+
+/* reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+a {
+    text-decoration:none;
+    color:var(--text-color);
+}
+
+ul {
+    list-style-type:none;
+}
+
+img{display:block;}
+
+html,body{
+    height:100%;
+}
+body {
+    font-size:var(--baseFontSize);
+    font-family:'Noto Sans KR', sans-serif;
+    color:var(--text-color);
+}
+
+/* 컨테이너 */
+.container {
+    width:100%;
+    height:calc(100% - 60px);
+    position:relative;
+}
+
+/* 헤더영역 */
+header {
+    width:100%;
+    background-color:#fff;
+    height:60px;
+    box-shadow:0 10px 10px rgba(0, 0, 0, 0.3);
+    position:relative;
+    z-index:300;
+}
+
+/* 헤더 로고 */
+header>h1 {
+    position:absolute;
+    height:60px;
+    padding:12px 0px 0px 20px ;
+
+}
+
+header>h1 img {
+    height:36px;
+
+}
+
+header>ul {
+    float:right;
+    line-height:60px;
+    width:600px;
+}
+
+/* 헤더 네비게이션 */
+header>ul>li {
+    float:left;
+    font-size:var(--heading1);
+    width:25%;
+
+}
+header>ul>li>a{
+    display:block;
+    padding:0 20px ;
+    width:100%; 
+    text-align:center;
+}
+header>ul>li>a:hover {
+    background-color: rgba(51, 51, 51, 1);
+    color:#fff;
+    transition-duration: 300ms;
+}
+
+/* 4단 섹션 */
+.col{
+    width: calc(100%/4);
+    height: 100%;
+    position: relative;
+    float: left;
+    background: #fff;
+    overflow: hidden;
+    background:linear-gradient(white,lightgray,white);
+}
+.col:hover{
+    background:linear-gradient(white,lightgray,white);
+    box-shadow:0 0 100px #000;
+}
+
+/* 4단 텍스트  */
+.col h1{
+    font-size:3.5vmax;
+    font-weight: 700;
+    line-height: 85px;
+    overflow-wrap: anywhere;
+    transition: font-size 1s;
+    color: #555;
+    position:absolute;
+}
+.col:hover h1{
+    color:var(--text-color);
+    font-size:300%;
+}
+
+/* 4단 텍스트 위치 설정 */
+#section1 h1{
+    top:0%;
+    left:0%;
+}
+#section2 h1{
+    top:25%;
+    right:0%;
+}
+#section3 h1{
+    top:50%;
+    left:0%;
+}
+#section4 h1{
+    top:75%;
+    right:0%;
+}
+
+/* 4단 이미지 위치 설정 */
+.col img{
+    position: absolute;
+    height:70%;
+}
+#section1 img{
+    top:7%;
+    left:0%;
+}
+#section2 img{
+    top:30%;
+    left:15%;
+}
+#section3 img{
+    top:-15%;
+    left:0%;
+}
+#section4 img{
+    top:7%;
+    right:15%;}
+/* 섹션 호버 검은 배경 영역 */
+.shadow{
+    width:100%;
+    height:calc(100% + 60px);
+    position:absolute;
+    left:0;
+    top:0;
+    background:rgba(0,0,0,0.6);
+    z-index:100;
+    display:none;
+}
